@@ -1,0 +1,460 @@
+focus_tree = {
+	id = pih
+	continuous_focus_position = { x = 0 y = 1000 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = AKT
+		}
+	}
+	#The Speech
+	focus = {
+		id = AKT_the_speech
+		icon = GFX_AKT_the_speech-96410
+		x = 5
+		y = 0
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			add_stability = 0.05
+
+			add_war_support = 0.05
+
+			
+
+			
+
+			country_event = {
+
+			days = 4 
+
+			id = AKT_aktau.2
+
+			}
+
+			
+		}
+	}
+
+	#A new Dawn
+	focus = {
+		id = AKT_a_new_dawn
+		icon = GFX_AKT_a_new_dawn-96426
+		x = 5
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = AKT_the_speech  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			add_manpower = 8000
+
+			country_event = {
+
+			days = 4
+
+			id = AKT_aktau.1
+
+			}
+
+			
+		}
+	}
+
+	#Shaman Guidance
+	focus = {
+		id = AKT_shaman_guidance
+		icon = GFX_AKT_shaman_guidance-96439
+		x = 4
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = AKT_a_new_dawn  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = KAZ
+
+			
+		}
+		completion_reward = {
+			add_stability = 0.15
+
+			
+		}
+	}
+
+	#Memory of the bombing
+	focus = {
+		id = AKT_memory_of_the_bombing
+		icon = GFX_goal_generic_air_bomber
+		x = 4
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = AKT_shaman_guidance  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+		}
+		completion_reward = {
+			add_war_support = 0.05
+
+			
+		}
+	}
+
+	#Our own Guernica
+	focus = {
+		id = AKT_our_own_guernica
+		icon = GFX_AKT_our_own_guernica-97631
+		x = 4
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = AKT_memory_of_the_bombing  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			add_stability = 0.05
+
+			
+		}
+	}
+
+	#Destroy the russian flag
+	focus = {
+		id = AKT_destroy_the_russian_flag
+		icon = GFX_AKT_destroy_the_russian_flag-97632
+		x = 2
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = AKT_shaman_guidance  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			add_stability = -0.05
+
+			add_war_support = 0.15
+
+			add_political_power = 50
+
+			
+		}
+	}
+
+	#Only Aktau, Only Kazakhstan
+	focus = {
+		id = AKT_onlyaktauonlykazakhstan
+		icon = GFX_AKT_onlyaktauonlykazakhstan-97633
+		x = 2
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = AKT_destroy_the_russian_flag  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			random_owned_controlled_state ={
+
+			 limit = {
+
+			 free_building_slots = {
+
+			 building = industrial_complex
+
+			 size > 0
+
+			 include_locked = yes
+
+			 }
+
+			 }
+
+			 add_extra_state_shared_building_slots = 1
+
+			 add_building_construction = {
+
+			 type = industrial_complex
+
+			 level = 6
+
+			 instant_build = yes
+
+			 }
+
+			 set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+
+			 }
+
+			
+		}
+	}
+
+	#For Aktau, For Kazakhstan !
+	focus = {
+		id = AKT_foraktauforkazakhstan
+		icon = GFX_AKT_foraktauforkazakhstan-97646
+		x = 5
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = AKT_our_own_guernica  } prerequisite = { focus = AKT_onlyaktauonlykazakhstan  } prerequisite = { focus = AKT_burn_the_disloyal  } prerequisite = { focus = AKT_kazakh_tank  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			add_stability = 0.15
+
+			
+		}
+	}
+
+	#Rebuild the city
+	focus = {
+		id = AKT_rebuild_the_city
+		icon = GFX_AKT_rebuild_the_city-97787
+		x = 6
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = AKT_a_new_dawn  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			random_owned_controlled_state ={
+
+			 limit = {
+
+			 free_building_slots = {
+
+			 building = industrial_complex
+
+			 size > 0
+
+			 include_locked = yes
+
+			 }
+
+			 }
+
+			 add_extra_state_shared_building_slots = 1
+
+			 add_building_construction = {
+
+			 type = industrial_complex
+
+			 level = 8
+
+			 instant_build = yes
+
+			 }
+
+			 set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+
+			 }
+
+			
+		}
+	}
+
+	#Burn the disloyal
+	focus = {
+		id = AKT_burn_the_disloyal
+		icon = GFX_AKT_burn_the_disloyal-97815
+		x = 6
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = AKT_slavic_slaves  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			add_manpower = -800
+
+			
+		}
+	}
+
+	#A great army
+	focus = {
+		id = AKT_a_great_army
+		icon = GFX_AKT_a_great_army-97823
+		x = 8
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = AKT_a_new_dawn  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+		}
+		completion_reward = {
+			army_experience = 10
+
+			add_research_slot = 1
+
+			
+		}
+	}
+
+	#Slavic slaves
+	focus = {
+		id = AKT_slavic_slaves
+		icon = GFX_AKT_slavic_slaves-97805
+		x = 6
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = AKT_rebuild_the_city  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			random_owned_controlled_state ={
+
+			 limit = {
+
+			 free_building_slots = {
+
+			 building = arms_factory
+
+			 size > 0
+
+			 include_locked = yes
+
+			 }
+
+			 }
+
+			 add_extra_state_shared_building_slots = 3
+
+			 add_building_construction = {
+
+			 type = arms_factory
+
+			 level = 5
+
+			 instant_build = yes
+
+			 }
+
+			 set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+
+			 }
+
+			add_stability = -0.05
+
+			
+		}
+	}
+
+	#Kazakh Tank
+	focus = {
+		id = AKT_kazakh_tank
+		icon = GFX_AKT_kazakh_tank-166
+		x = 8
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = AKT_man_and_horse  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			research_speed_factor = 0.5
+		}
+	}
+
+	#Man and Horse
+	focus = {
+		id = AKT_man_and_horse
+		icon = GFX_AKT_man_and_horse-97827
+		x = 8
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = AKT_a_great_army  }
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = AKT
+
+			
+		}
+		completion_reward = {
+			add_ideas = AKT_Horse_and_Man
+
+			
+		}
+	}
+
+}

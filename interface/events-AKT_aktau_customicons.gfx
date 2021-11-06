@@ -1,0 +1,15 @@
+spriteTypes = { 
+	##Icon For: Dream of kazakhstan
+	SpriteType = { 
+		name = "AKT_dream_of_kazakhstan-872"
+		texturefile = "gfx/interface/events/aktau-event/AKT_dream_of_kazakhstan-872.dds"
+	}
+
+	##Icon For: The Speech
+	SpriteType = { 
+		name = "AKT_the_speech-96418"
+		texturefile = "gfx/interface/events/aktau-event/AKT_the_speech-96418.dds"
+	}
+
+ 
+ }

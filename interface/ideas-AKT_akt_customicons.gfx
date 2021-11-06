@@ -1,0 +1,9 @@
+spriteTypes = { 
+	##Icon For: Horse and Man
+	SpriteType = { 
+		name = "GFX_idea_AKT_horse_and_man-1224"
+		texturefile = "gfx/interface/ideas/akt-ideas/AKT_horse_and_man-1224.dds"
+	}
+
+ 
+ }

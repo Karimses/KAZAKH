@@ -1,0 +1,37 @@
+﻿l_english:
+ ### Parties ###
+ ERA_communist_party:0 "RCP"
+ ERA_communist_party_long:0 "Russia Communist Party"
+ ERA_socialist_party:0 "RCP"
+ ERA_socialist_party_long:0 "Reformed communist party"
+ ERA_social_democrat_party:0 "RDP"
+ ERA_social_democrat_party_long:0 "Russian Democrat Party"
+ ERA_social_liberal_party:0 "LRP"
+ ERA_social_liberal_party_long:0 "Liberal Russian Party"
+ ERA_social_conservative_party:0 "CPF"
+ ERA_social_conservative_party_long:0 "Conservative Party of Russia"
+ ERA_authoritarian_democrat_party:0 "RDP-Right"
+ ERA_authoritarian_democrat_party_long:0 "Russian Democrat Party-Right"
+ ERA_despotism_party:0 "BER"
+ ERA_despotism_party_long:0 "Brigade of Eastern Russia"
+ ERA_fascism_party:0 "RFP"
+ ERA_fascism_party_long:0 "Russian Fascist Party"
+ ERA_national_socialism_party:0 "RFP-Vonsyatsky"
+ ERA_national_socialism_party_long:0 "Russian Fascist Party-Vonsyatsky"
+ ERA_ultranational_socialism_party:0 "GPR"
+ ERA_ultranational_socialism_party_long:0 "Greater Party of Russia"f
+
+ ### Leader Bios ###
+ POLITICS_ANASTASY_VONSYATSKY_DESC:0 "Anastasy Vonsyatsky is probabely the least to be the harbin heir, is warlord is very weak and he can be invaded by his ennemys, Rodzaevsky and Matkovsky who can destroy the East Russian state."
+
+  ### Ideas ###
+
+  ### Ministers ###
+ ERA_Asylkhan_Turgan_hog:0 "Asylkhan Turgan"
+ ERA_Dzhanysbek_Kusmangali_mil:0 "Dzhanysbek Kusmangali"
+ ERA_Wakhab_Sultan_for:0 "Wakhab Sultan"
+ ERA_Khasan_Bekturgan_eco:0 "Khasan Bektur"
+
+ ### Focuses ###
+
+   ### Events ###

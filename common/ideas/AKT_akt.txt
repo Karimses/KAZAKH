@@ -1,0 +1,27 @@
+ideas = {
+	country = {
+
+		AKT_horse_and_man = {
+			picture = AKT_horse_and_man-1224
+			ai_will_do = {
+				factor = 100
+			}
+			allowed = {
+				AKT = { has_completed_focus = GER_anschluss }
+
+			}
+			available = {
+				AKT = { has_completed_focus = GER_anschluss }
+			}
+			visible = {
+				AKT = { has_completed_focus = GER_anschluss }
+			}
+			modifier = {
+				cavalry_attack_factor = 0.5
+			}
+			on_add = {
+				cavalry_attack_factor = 0.5
+			}
+		}
+	}
+}

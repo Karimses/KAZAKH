@@ -1,0 +1,49 @@
+add_namespace = AKT_aktau
+
+#Dream of kazakhstan
+country_event = {
+	id = AKT_aktau.1
+	title = aktau.1.t
+	desc = aktau.1.desc
+
+	picture = AKT_dream_of_kazakhstan-872
+	is_triggered_only = yes
+	mean_time_to_happen = { days = 4 }
+	option = {
+		name = AKT_aktau.1.a
+		trigger = {
+		   has_completed_focus = AKT_a_new_dawn
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Speech
+country_event = {
+	id = AKT_aktau.2
+	title = aktau.2.t
+	desc = aktau.2.desc
+
+	picture = AKT_the_speech-96418
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = AKT_the_speech
+
+	}
+	option = {
+		name = AKT_aktau.2.a
+		trigger = {
+			has_completed_focus = AKT_the_speech
+
+		}
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
